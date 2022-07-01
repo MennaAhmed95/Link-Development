@@ -1,14 +1,13 @@
 import "./App.scss";
 import "./sass/main.scss";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import HomePage from "./container/HomePage";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+    </Routes>
   );
 }
 

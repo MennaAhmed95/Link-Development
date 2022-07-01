@@ -25,17 +25,17 @@ const Footer = () => {
             <h4>Company</h4>
             <ul className="footer-link">
               <li>
-                <a href="#" title="Home">
+                <a href="/" title="Home">
                   About
                 </a>
               </li>
               <li>
-                <a href="#" title="Home">
+                <a href="/" title="Home">
                   Careers
                 </a>
               </li>
               <li>
-                <a href="#" title="Home">
+                <a href="/" title="Home">
                   Mobile
                 </a>
               </li>
@@ -45,17 +45,17 @@ const Footer = () => {
             <h4>Contact</h4>
             <ul className="footer-link">
               <li>
-                <a href="#" title="Faq">
+                <a href="/" title="Faq">
                   Help/FAQ
                 </a>
               </li>
               <li>
-                <a href="#" title="Blog">
+                <a href="/" title="Blog">
                   Press
                 </a>
               </li>
               <li>
-                <a href="#" title="Blog">
+                <a href="/" title="Blog">
                   Affilates
                 </a>
               </li>
@@ -65,17 +65,17 @@ const Footer = () => {
             <h4>Media</h4>
             <ul className="footer-link">
               <li>
-                <a href="#" title="Contact">
+                <a href="/" title="Contact">
                   News
                 </a>
               </li>
               <li>
-                <a href="#" title="Contact">
+                <a href="/" title="Contact">
                   Photo
                 </a>
               </li>
               <li>
-                <a href="#" title="Contact">
+                <a href="/" title="Contact">
                   Video
                 </a>
               </li>
