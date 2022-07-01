@@ -1,0 +1,15 @@
+.toggle-button {
+  @include flexD(column, space-around);
+  @include size(30px, 24px);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+.toggle-button__line {
+  @include size(25px, 2px);
+  background: black;
+}

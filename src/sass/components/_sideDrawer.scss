@@ -1,0 +1,44 @@
+@import "./../abstracts/variables";
+.side-drawer {
+  @include size(40%, 100%);
+  background-color: $white;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-width: 400px;
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-out;
+  &.open {
+    transform: translateX(0);
+  }
+
+  ul {
+    height: 100%;
+    list-style: none;
+    @include flexD(column, flex-start, center);
+  }
+
+  li {
+    margin: 0.5rem 0;
+    & button {
+      background: $white;
+      padding: 0.5rem;
+      border-radius: 6px;
+      width: 5.5rem;
+    }
+  }
+
+  a {
+    color: rgb(34, 15, 15);
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .side-drawer {
+    display: none;
+  }
+}

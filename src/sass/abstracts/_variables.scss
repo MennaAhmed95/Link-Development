@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;600;700&family=Volkhov:wght@700&display=swap");
+
+//main colors
+
+$iconColor: #11142d;
+
+$mainColor: #0032cb;
+
+$textNav: #212832;
+$text: #14183e;
+$headerTit: #181e4b;
+$skyColor: #0eceff;
+$dateColor: #707070;
+$textColor: #5e6282;
+$footerTit: #080809;
+$backgroundTabs: #e3e3e3;
+$grayLight: #efefef;
+$white: #ffffff;
+$blueDark: #253776;
+$lemonColor: #a6e51c;
+$orangeColor: #ff7c16;
+$pinkDark: #f215b6;
+
+//fonts
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Volkhov', serif;
+
+$Sans: "Open Sans", sans-serif;
+$Poppins: "Poppins", sans-serif;
+$Volkhov: "Volkhov", serif;
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
