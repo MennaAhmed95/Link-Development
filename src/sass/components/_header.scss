@@ -2,14 +2,16 @@
   position: fixed;
   top: 0;
   left: 0;
-  @include size(100%, 56px);
+  @include size(100%, 5rem);
+  background: $white;
+  z-index: 10;
 }
 
 .toolbar__navigation {
   @include flexD(row, center, center);
   height: 100%;
   padding: 0 1rem;
-  margin-top: 1rem;
+  // margin-top: 1rem;
 }
 
 .toolbar__logo a {

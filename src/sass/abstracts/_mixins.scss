@@ -43,3 +43,25 @@
   width: $wid;
   height: $height;
 }
+
+$desktop: 1024px;
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: $desktop) {
+      @content;
+    }
+  }
+}
+
+@mixin break($point) {
+  @if $point == desktop {
+    @media (max-width: $desktop) {
+      @content;
+    }
+  }
+  @if $point == 768 {
+    @media (max-width: 786) {
+      @content;
+    }
+  }
+}

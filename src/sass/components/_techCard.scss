@@ -1,0 +1,166 @@
+.cardd {
+  @include size(230px, 240px);
+  background-color: $white;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    .cardd__caption {
+      top: 50%;
+      left: 25%;
+      transform: translateY(-50%);
+    }
+    .cardd__image {
+      transform: translateY(-10px);
+    }
+    .cardd__thumb {
+      &::after {
+        top: 0;
+      }
+    }
+  }
+  &__thumb {
+    position: relative;
+    max-height: 260px;
+    overflow: hidden;
+    @include breakpoint(desktop) {
+      max-height: 260px;
+    }
+    &::after {
+      position: absolute;
+      top: 0;
+      display: block;
+      content: "";
+      @include size;
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5) 40%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transition: 0.3s;
+
+      @include breakpoint(desktop) {
+        top: calc(100% - 140px);
+      }
+    }
+    p {
+      position: absolute;
+      top: 8rem;
+      left: 1rem;
+      color: $white;
+      font-size: xx-large;
+      font-weight: 500;
+    }
+  }
+
+  &__image {
+    transition: 0.5s ease-in-out;
+    @include size(230px, 240px);
+    object-fit: cover;
+  }
+
+  &__caption {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    z-index: 1;
+    color: white;
+    transform: translateY(-50%);
+    text-align: center;
+    transition: 0.3s;
+
+    @include breakpoint(desktop) {
+      top: calc(100% - -50px);
+      transform: unset;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    border: 1px solid white;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+      color: black;
+      background-color: white;
+    }
+  }
+}
+
+.overlap {
+  @include flexD(row, flex-end, center);
+  @include size(100%, 44rem);
+  margin: 5rem 0;
+  z-index: -2;
+  background: url("./../../assets/images/gray.png");
+  .col1 {
+    margin-top: 11rem;
+  }
+  .col2 {
+    margin-top: 7rem;
+    z-index: 2;
+  }
+  .col3 {
+    margin-bottom: 8rem;
+    z-index: 2;
+  }
+}
+.divItm {
+  @include size(69%, 33rem);
+  @include flexD(column, center, flex-end);
+  background: url("./../../assets/images/pink.png");
+  background-repeat: no-repeat;
+  z-index: 0;
+  margin-left: -20rem;
+  @include break(desktop) {
+    @include size(62%, 33rem);
+  }
+  p {
+    width: 68%;
+    text-align: right;
+    font-size: x-large;
+    color: $white;
+    padding: 0 4rem;
+    @include break(desktop) {
+      width: 50%;
+      padding: 0 2rem;
+    }
+  }
+  h2 {
+    text-align: right;
+    font-weight: 700;
+    padding: 0 4rem;
+    font-size: xxx-large;
+    color: $blueDark;
+    @include break(desktop) {
+      padding: 0 2rem;
+    }
+  }
+}
+@media (max-width: 975px) {
+  .divItm {
+    display: none;
+  }
+  .overlap {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .overlap {
+    @include size;
+    .col1 {
+      margin: 0;
+    }
+    .col2 {
+      margin: 0;
+    }
+    .col3 {
+      margin: 0;
+    }
+  }
+}
