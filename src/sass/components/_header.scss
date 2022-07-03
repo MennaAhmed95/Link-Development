@@ -4,7 +4,7 @@
   left: 0;
   @include size(100%, 5rem);
   background: $white;
-  z-index: 10;
+  z-index: 1;
 }
 
 .toolbar__navigation {
@@ -37,7 +37,7 @@
 
 .toolbar_navigation-items li {
   padding: 0 0.5rem;
-  margin: 0 2rem;
+  margin: 0 1rem;
   & button {
     background: $white;
     padding: 0.5rem;

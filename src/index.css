@@ -1,1 +1,30 @@
+[aria-hidden="true"] {
+  display: none !important;
+}
 
+li::marker {
+  color: transparent;
+}
+
+.react-slideshow-container + ul.indicators {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.react-slideshow-container + ul.indicators > li > button {
+  width: 40px;
+  height: 40px;
+  margin-right: 5rem;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  border: 0;
+}
+
+.react-slideshow-container + ul.indicators > li > button.active {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: skyblue;
+}

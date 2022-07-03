@@ -1,0 +1,95 @@
+.headerSec {
+  margin-top: 6rem;
+  margin-left: 6rem;
+  overflow: hidden;
+  .roww {
+    flex-wrap: nowrap;
+  }
+  .col1 {
+    .she {
+      position: absolute;
+      top: 25%;
+      right: 15%;
+      z-index: -1;
+    }
+
+    h4 {
+      font-weight: 600;
+      font-size: x-large;
+    }
+    h2 {
+      color: $headerTit;
+      font-weight: 700;
+      font-size: xxx-large;
+      padding: 2rem 0;
+    }
+    p {
+      max-width: 60%;
+      font-weight: 500;
+      color: $textColor;
+      line-height: 30px;
+      padding-bottom: 1.5rem;
+    }
+    .btnCont {
+      @include flexD(row, flex-start, center);
+      flex-wrap: wrap;
+    }
+    button {
+      font-weight: 500;
+    }
+    .find {
+      padding: 10px 20px;
+      color: $white;
+      background: $orangeColor;
+      border: none;
+      border-radius: 10px;
+      margin: 0 0.5rem;
+    }
+    .play {
+      padding: 10px 20px;
+      background: $white;
+      border: none;
+      margin: 0 0.5rem;
+      color: $playbtn;
+      @include flexD;
+      img {
+        width: 50px;
+        margin-right: 5px;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    .col1 {
+      .she {
+        top: 30%;
+        left: 44%;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .col1 .she {
+      top: 23%;
+      left: 23%;
+    }
+  }
+  .col2 {
+    img {
+      max-height: 410px;
+    }
+    .backgroung {
+      position: absolute;
+      bottom: 25%;
+      left: 25%;
+    }
+    @media (max-width: 768px) {
+      .backgroung {
+        bottom: 60%;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    .col2 {
+      display: none;
+    }
+  }
+}
