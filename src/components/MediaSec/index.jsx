@@ -8,6 +8,8 @@ const MediaSection = () => {
   const [news, setNews] = useState([]);
   const [filteredNews, setfilteredNews] = useState(news);
   const [tab, setTab] = useState(0);
+  const [size, setSize] = useState(6);
+
   useEffect(() => {
     axiosInstance()
       .get("91298d970c27e9a06518")
@@ -36,6 +38,9 @@ const MediaSection = () => {
     if (id !== 0) setfilteredNews(news.filter((itm) => +itm.categoryID === id));
     else setfilteredNews(news);
   };
+  const getAllNews = () => {
+    setSize(filteredNews.length);
+  };
   return (
     <div className="mediasec">
       <h3>Media</h3>
@@ -59,17 +64,26 @@ const MediaSection = () => {
       </div>
       <section className="containCards">
         {filteredNews.length > 0 ? (
-          filteredNews.map((itm) => (
-            <NewsCard
-              key={itm.id}
-              itm={itm}
-              cat={cat.find((catt) => catt.id === +itm.categoryID)?.name}
-            />
-          ))
+          filteredNews
+            .slice(0, size)
+            .map((itm) => (
+              <NewsCard
+                key={itm.id}
+                itm={itm}
+                cat={cat.find((catt) => catt.id === +itm.categoryID)?.name}
+              />
+            ))
         ) : (
           <div>Not Found</div>
         )}
       </section>
+      {filteredNews.length > size ? (
+        <button className="viewall" onClick={getAllNews}>
+          View All News
+        </button>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
